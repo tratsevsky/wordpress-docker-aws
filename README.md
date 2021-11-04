@@ -19,7 +19,12 @@ SETUP - Run
 1. Create a new folder, clone the provided yaml file
 2. Go to folder, run "docker compose up"
 
+SETUP - Get a public DNS name to proceed with Wordpress configuration
+- docker context ps
 
 RESULT
 Docker converts the provided YAML file into AWS CloudFormation template and deploys the infrastructure with ECS in Fargate mode.
 
+
+FAQ
+1. If get a 503 error immediately after stack created, just wait for 1-2 minutes and refresh the page. The reason for such behavior is incomplete DB setup task. It remains in "IN PROGRESS" state after main CF template is finished.
